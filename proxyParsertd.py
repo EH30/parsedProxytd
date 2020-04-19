@@ -48,7 +48,7 @@ def parsetd(url="https://us-proxy.org/"):
         elif parseIP(x)[0].isdigit() and not "." in parseIP(x) and st != "":
             st += ":"+parseIP(x)
             output.append(st.strip())
-            print("Parsed: {0}".format(st))
+            print(st)
             st = ""
         else:
             continue
@@ -60,3 +60,6 @@ try:
 except IndexError:
     print("Using Default website to parse proxy List td\nYou can use another site to parse type python proxyParsedtd.py [Site]\nparsed proxies will be saved in parsedIP.txt")
     file_writer(parsetd())
+
+
+print("[+]Saved in parsedIP.txt")
